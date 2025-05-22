@@ -4,7 +4,7 @@
       <div class="container">
         <nav class="navbar">
           <div class="navbar-link">
-            <a href="#!">
+            <a href="#header">
               <img src="../assets/Logo.png" alt="" class="navbar-logo" />
             </a>
           </div>
@@ -15,7 +15,7 @@
           </button>
           <div :class="['navbar-menu', { open: isOpen }]">
             <a @click.prevent="scrollToSection('about')">О нас</a>
-            <a href="#about">Цены</a>
+            <a href="#price">Цены</a>
             <a href="#contacts">Мастера</a>
             <a href="#contacts">Наши работы</a>
             <a href="#contacts">Эскизы</a>
@@ -148,7 +148,6 @@ onUnmounted(() => {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px 0;
   gap: 20px;
 }
 

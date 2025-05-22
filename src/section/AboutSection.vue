@@ -58,13 +58,13 @@ onMounted(() => {
   overflow: hidden;
 
   opacity: 0;
-  transform: translateY(20px);
+  transform: scale(0.95);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .about.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: scale(1);
 }
 
 .about::before {
@@ -78,7 +78,7 @@ onMounted(() => {
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 40px 60px;
   background-color: rgba(20, 20, 20, 0.8);

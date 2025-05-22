@@ -1,7 +1,8 @@
 <script setup>
-import AboutPage from './section/AboutPage.vue'
-import ContactsPage from './section/ContactsPage.vue'
+import AboutSection from './section/AboutSection.vue'
+import ContactsSection from './section/ContactsSection.vue'
 import Header from "./section/Header.vue";
+import PriceSection from "./section/PriceSection.vue";
 </script>
 
 <template>
@@ -10,10 +11,13 @@ import Header from "./section/Header.vue";
       <Header />
     </section>
     <section id="about">
-      <AboutPage />
+      <AboutSection />
+    </section>
+    <section id="price">
+      <PriceSection />
     </section>
     <section id="contacts">
-      <ContactsPage />
+      <ContactsSection />
     </section>
   </main>
 </template>

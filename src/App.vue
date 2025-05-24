@@ -3,6 +3,7 @@ import AboutSection from './section/AboutSection.vue'
 import ContactsSection from './section/ContactsSection.vue'
 import Header from "./section/Header.vue";
 import PriceSection from "./section/PriceSection.vue";
+import MasterSection from "./section/MasterSection.vue";
 </script>
 
 <template>
@@ -15,6 +16,9 @@ import PriceSection from "./section/PriceSection.vue";
     </section>
     <section id="price">
       <PriceSection />
+    </section>
+    <section id="master">
+      <MasterSection />
     </section>
     <section id="contacts">
       <ContactsSection />

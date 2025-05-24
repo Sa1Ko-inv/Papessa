@@ -16,7 +16,7 @@
           <div :class="['navbar-menu', { open: isOpen }]">
             <a @click.prevent="scrollToSection('about')">О нас</a>
             <a href="#price">Цены</a>
-            <a href="#contacts">Мастера</a>
+            <a href="#master">Мастера</a>
             <a href="#contacts">Наши работы</a>
             <a href="#contacts">Эскизы</a>
             <a href="#contacts">Мерч</a>

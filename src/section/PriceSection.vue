@@ -305,30 +305,6 @@ onMounted(() => {
 
   }
 }
-
-@media (max-width: 1165px) {
-  .vignette {
-    width: 39vh;
-    img {
-      position: relative;
-      width: 100%;
-      object-fit: cover;
-      opacity: 0.6; /* серебристый эффект */
-    }
-  }
-  .vignette-left {
-    left: -26vh;
-    filter: drop-shadow(0 0 5px silver);
-    transform: scaleX(-1);
-  }
-
-  .vignette-right {
-    right: -26vh;
-    filter: drop-shadow(0 0 5px silver);
-
-  }
-}
-
 @media (max-width: 1375px) {
   .vignette {
     width: 39vh;
@@ -354,33 +330,56 @@ onMounted(() => {
 
 @media (max-width: 1295px) {
   .vignette {
-    width: 39vh;
+    width: 300px;
     img {
       position: relative;
-      width: 19vh;
       object-fit: cover;
       opacity: 0.6; /* серебристый эффект */
     }
   }
   .vignette-left {
-    left: -19.8vh;
+    left: -12vh;
     filter: drop-shadow(0 0 5px silver);
     transform: scaleX(-1);
   }
 
   .vignette-right {
-    right: -19.8vh;
+    right: -12vh;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+@media (max-width: 1200px) {
+  .vignette {
+    width: 320px;
+    img {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: -19vh;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: -19vh;
     filter: drop-shadow(0 0 5px silver);
 
   }
 }
 
 /* Мобильная адаптация */
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
   .vignette {
     display: none;
   }
 }
+
 
 .container {
   max-width: 900px;

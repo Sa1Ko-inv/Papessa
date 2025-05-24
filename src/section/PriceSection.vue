@@ -5,6 +5,8 @@
       ref="aboutSection"
       :style="{ paddingTop: sectionPadding, paddingBottom: sectionPadding }"
   >
+    <div class="vignette vignette-left"><img src="./../assets/V1L.png" alt=""></div>
+    <div class="vignette vignette-right"><img src="./../assets/V1L.png" alt=""></div>
     <div class="container">
       <h2 class="section-title">Узнай цену на татуировку</h2>
       <p class="description">
@@ -193,7 +195,191 @@ onMounted(() => {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #ff5e57, transparent);
+  background: linear-gradient(90deg, transparent, #adacac, transparent);
+}
+
+.vignette {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 500px; /* регулируй по желанию */
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: center;
+  z-index: 1; /* под контентом, но выше фона */
+  opacity: 0.6; /* серебристый эффект */
+  pointer-events: none;
+
+
+  img {
+    position: relative;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6; /* серебристый эффект */
+    transform: scaleY(-1);
+  }
+}
+
+.vignette-left {
+  left: -5.4vh;
+  filter: drop-shadow(0 0 5px silver);
+  transform: scaleX(-1);
+
+}
+
+.vignette-right {
+  right: -5.4vh;
+  filter: drop-shadow(0 0 5px silver);
+
+}
+
+@media (max-width: 1600px) {
+  .vignette {
+    width: 390px;
+    img {
+      position: relative;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+      transform: scaleY(-1);
+    }
+  }
+  .vignette-left {
+    left: -5.4vh;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+
+  }
+
+  .vignette-right {
+    right: -5.4vh;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+@media (max-width: 1450px) {
+  .vignette {
+    width: 320px;
+    img {
+      position: relative;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+      transform: scaleY(-1);
+    }
+  }
+  .vignette-left {
+    left: -5.4vh;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+
+  }
+
+  .vignette-right {
+    right: -5.4vh;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+@media (max-width: 1245px) {
+  .vignette {
+  width: 39vh;
+    img {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: -22vh;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: -22vh;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+@media (max-width: 1165px) {
+  .vignette {
+    width: 39vh;
+    img {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: -26vh;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: -26vh;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+@media (max-width: 1375px) {
+  .vignette {
+    width: 39vh;
+    img {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: -15vh;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: -15vh;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+@media (max-width: 1295px) {
+  .vignette {
+    width: 39vh;
+    img {
+      position: relative;
+      width: 19vh;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: -19.8vh;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: -19.8vh;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 1100px) {
+  .vignette {
+    display: none;
+  }
 }
 
 .container {
@@ -216,9 +402,9 @@ onMounted(() => {
 .section-title::after {
   content: '';
   display: block;
-  width: 80px;
+  width: 500px;
   height: 3px;
-  background: #ff5e57;
+  background: linear-gradient(90deg, transparent, #adacac, transparent);
   margin: 16px auto 0;
 }
 
@@ -251,18 +437,19 @@ input {
 
 input:focus {
   outline: none;
-  border-color: #ff5e57;
+  border-color: #adacac;
 }
 
 button {
-  background-color: #ff5e57;
-  color: white;
+  background-color: #d7d7d7;
+  filter: drop-shadow(0 0 5px silver);
+  color: black;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 button:hover:not(:disabled) {
-  background-color: #e14c47;
+  background-color: #c2c2c2;
 }
 
 button:disabled {
@@ -344,11 +531,12 @@ button:disabled {
 
 .file-label:hover {
   background-color: #333;
-  border-color: #ff5e57;
-  color: #ff5e57;
+  border-color: #adacac;
+  color: #adacac;
 }
 
 </style>
+
 
 <!--<template>-->
 <!--  <section-->
@@ -357,10 +545,12 @@ button:disabled {
 <!--      ref="aboutSection"-->
 <!--      :style="{ paddingTop: sectionPadding, paddingBottom: sectionPadding }"-->
 <!--  >-->
+<!--    <div class="vignette vignette-left"><img src="./../assets/V1L.png" alt=""></div>-->
+<!--    <div class="vignette vignette-right"><img src="./../assets/V1L.png" alt=""></div>-->
 <!--    <div class="container">-->
 <!--      <h2 class="section-title">Узнай цену на татуировку</h2>-->
 <!--      <p class="description">-->
-<!--        Цены на татуировки зависят от сложности работы, размера и стиля. Мы предлагаем индивидуальный подход к каждому клиенту.-->
+<!--        Цены на татуировки зависят от сложности работы, размера и места. Мы предлагаем индивидуальный подход к каждому клиенту.-->
 <!--        Для получения точной информации о стоимости, пожалуйста, свяжитесь с нами через форму ниже.-->
 <!--      </p>-->
 
@@ -374,11 +564,35 @@ button:disabled {
 <!--        <label for="tg">Ваш телеграм (Если есть)</label>-->
 <!--        <input id="tg" v-model="tg" type="text" />-->
 
-<!--        <label for="vk">Ваша ВК (Если есть)</label>-->
+<!--        <label for="vk">Ваш ВК (Если есть)</label>-->
 <!--        <input id="vk" v-model="vk" type="text" />-->
 
-<!--        <label for="file">Эскиз (png, jpg, jpeg):</label>-->
-<!--        <input id="file" type="file" multiple @change="handleFile" accept="image/png, image/jpeg, image/jpg" />-->
+<!--        <label for="size">Размер тату в см</label>-->
+<!--        <input id="size" type="number" v-model="size"/>-->
+
+<!--        <label for="location">Место:</label>-->
+<!--        <input id="location" type="text" v-model="location">-->
+
+<!--        <label for="file" class="file-label">📎 Прикрепить эскизы (png, jpg, jpeg)</label>-->
+<!--        <input-->
+<!--            id="file"-->
+<!--            type="file"-->
+<!--            multiple-->
+<!--            @change="handleFile"-->
+<!--            accept="image/png, image/jpeg, image/jpg"-->
+<!--            ref="fileInput"-->
+<!--            class="hidden-file-input"-->
+<!--        />-->
+
+<!--        <div v-if="files.length" class="file-list">-->
+<!--          <p>Загруженные файлы:</p>-->
+<!--          <ul>-->
+<!--            <li v-for="(file, index) in files" :key="index">-->
+<!--              {{ file.name }}-->
+<!--              <button type="button" @click="removeFile(index)" class="remove-btn">✖</button>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
 
 <!--        <button :disabled="loading">-->
 <!--          {{ loading ? 'Отправка...' : 'Узнать цену' }}-->
@@ -395,11 +609,15 @@ button:disabled {
 <!--const phone = ref('')-->
 <!--const tg = ref('')-->
 <!--const vk = ref('')-->
+<!--const size = ref('')-->
+<!--const location = ref('')-->
 <!--const files = ref([])-->
+<!--const fileInput = ref(null)-->
 <!--const loading = ref(false)-->
 
 <!--const handleFile = (e) => {-->
-<!--  files.value = Array.from(e.target.files)-->
+<!--  const newFiles = Array.from(e.target.files);-->
+<!--  files.value = [...files.value, ...newFiles];-->
 <!--}-->
 
 <!--const resetForm = () => {-->
@@ -407,7 +625,16 @@ button:disabled {
 <!--  phone.value = ''-->
 <!--  tg.value = ''-->
 <!--  vk.value = ''-->
+<!--  size.value = ''-->
+<!--  location.value = ''-->
 <!--  files.value = []-->
+<!--  if (fileInput.value) {-->
+<!--    fileInput.value.value = '' // Сброс input[type=file]-->
+<!--  }-->
+<!--}-->
+
+<!--const removeFile = (index) => {-->
+<!--  files.value.splice(index, 1);-->
 <!--}-->
 
 <!--const submit = async () => {-->
@@ -423,7 +650,9 @@ button:disabled {
 <!--👤 Имя: ${name.value}-->
 <!--📞 Телефон: ${phone.value}-->
 <!--✈️ Тг: ${tg.value}-->
-<!--🔵 ВК: ${vk.value}`-->
+<!--🔵 ВК: ${vk.value}-->
+<!--📏 Размер: ${size.value}-->
+<!--📍 Место: ${location.value}`-->
 
 <!--  loading.value = true-->
 
@@ -486,6 +715,9 @@ button:disabled {
 <!--<style scoped>-->
 <!--.price-section {-->
 <!--  position: relative;-->
+<!--  background-color: #121212;-->
+<!--  color: #f0f0f0;-->
+<!--  padding: 80px 20px;-->
 <!--  opacity: 0;-->
 <!--  transform: scale(0.95);-->
 <!--  transition: opacity 0.6s ease, transform 0.6s ease;-->
@@ -506,9 +738,51 @@ button:disabled {
 <!--  background: linear-gradient(90deg, transparent, #ff5e57, transparent);-->
 <!--}-->
 
+<!--.vignette {-->
+<!--  position: absolute;-->
+<!--  top: 0;-->
+<!--  bottom: 0;-->
+<!--  width: 500px; /* регулируй по желанию */-->
+<!--  background-repeat: repeat-x;-->
+<!--  background-size: contain;-->
+<!--  background-position: center;-->
+<!--  z-index: 1; /* под контентом, но выше фона */-->
+<!--  opacity: 0.6; /* серебристый эффект */-->
+<!--  pointer-events: none;-->
+
+
+<!--  img {-->
+<!--    position: relative;-->
+<!--    width: 500px;-->
+<!--    height: 100%;-->
+<!--    object-fit: cover;-->
+<!--    opacity: 0.6; /* серебристый эффект */-->
+<!--    transform: scaleY(-1);-->
+<!--  }-->
+<!--}-->
+
+<!--.vignette-left {-->
+<!--  left: -10vh;-->
+<!--  filter: drop-shadow(0 0 5px silver);-->
+<!--  transform: scaleX(-1);-->
+
+<!--}-->
+
+<!--.vignette-right {-->
+<!--  right: -10vh;-->
+<!--  filter: drop-shadow(0 0 5px silver);-->
+
+<!--}-->
+
+<!--/* Мобильная адаптация */-->
+<!--@media (max-width: 768px) {-->
+<!--  .vignette {-->
+<!--    display: none;-->
+<!--  }-->
+<!--}-->
 
 <!--.container {-->
-<!--  max-width: 700px;-->
+<!--  max-width: 900px;-->
 <!--  margin: 0 auto;-->
 <!--  background: rgba(20, 20, 20, 0.85);-->
 <!--  padding: 40px;-->
@@ -536,7 +810,7 @@ button:disabled {
 <!--.description {-->
 <!--  text-align: center;-->
 <!--  margin-bottom: 32px;-->
-<!--  font-size: 16px;-->
+<!--  font-size: 19px;-->
 <!--  color: #cccccc;-->
 <!--}-->
 
@@ -581,6 +855,43 @@ button:disabled {
 <!--  cursor: not-allowed;-->
 <!--}-->
 
+<!--.file-list {-->
+<!--  background: #1a1a1a;-->
+<!--  padding: 10px;-->
+<!--  border-radius: 8px;-->
+<!--  margin-top: -8px;-->
+<!--  margin-bottom: 8px;-->
+<!--}-->
+
+<!--.file-list ul {-->
+<!--  list-style: none;-->
+<!--  padding: 0;-->
+<!--  margin: 0;-->
+<!--}-->
+
+<!--.file-list li {-->
+<!--  display: flex;-->
+<!--  justify-content: space-between;-->
+<!--  align-items: center;-->
+<!--  padding: 6px 0;-->
+<!--  border-bottom: 1px solid #333;-->
+<!--  color: #f0f0f0;-->
+<!--  font-size: 14px;-->
+<!--}-->
+
+<!--.remove-btn {-->
+<!--  background: transparent;-->
+<!--  border: none;-->
+<!--  color: #ff5e57;-->
+<!--  font-size: 16px;-->
+<!--  cursor: pointer;-->
+<!--  padding: 0 8px;-->
+<!--}-->
+<!--.remove-btn:hover {-->
+<!--  color: #ff2e2e;-->
+<!--}-->
+
+
 <!--/* Responsive */-->
 <!--@media (max-width: 600px) {-->
 <!--  .container {-->
@@ -597,4 +908,29 @@ button:disabled {
 <!--    padding: 10px;-->
 <!--  }-->
 <!--}-->
+
+<!--.hidden-file-input {-->
+<!--  display: none;-->
+<!--}-->
+
+<!--.file-label {-->
+<!--  margin-top: 15px;-->
+<!--  display: inline-block;-->
+<!--  padding: 12px 16px;-->
+<!--  background-color: #2c2c2c;-->
+<!--  color: #f0f0f0;-->
+<!--  border: 1px dashed #555;-->
+<!--  border-radius: 8px;-->
+<!--  cursor: pointer;-->
+<!--  text-align: center;-->
+<!--  transition: all 0.3s ease;-->
+<!--  font-size: 14px;-->
+<!--}-->
+
+<!--.file-label:hover {-->
+<!--  background-color: #333;-->
+<!--  border-color: #ff5e57;-->
+<!--  color: #ff5e57;-->
+<!--}-->
+
 <!--</style>-->

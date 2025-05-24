@@ -93,23 +93,24 @@ const submit = async () => {
 .open-button {
   padding: 12px 24px;
   font-size: 16px;
-  background-color: #9f4541;
-  color: white;
+  background-color: #d7d7d7;
+  color: black;
+  filter: drop-shadow(0 0 5px silver);
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .open-button:hover {
-  background-color: #8a3735;
+  background-color: #c2c2c2;
 }
 
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  top: -18vh;
+  left: -40vw;
+  width: 150vw;
+  height: 110vh;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
@@ -117,11 +118,29 @@ const submit = async () => {
   z-index: 10000;
 }
 
+@media (max-width: 1650px) {
+  .modal-overlay {
+    top: -15vh;
+    left: -20vw;
+    width: 120vw;
+    height: 110vh;
+  }
+}
+
+@media (max-width: 1400px) {
+  .modal-overlay {
+    top: -17vh;
+    left: -5vw;
+    width: 100vw;
+    height: 110vh;
+  }
+}
+
 .modal {
   background: #1e1e1e;
   padding: 30px;
   border-radius: 16px;
-  width: 340px;
+  width: 440px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -132,7 +151,7 @@ const submit = async () => {
 .modal h2 {
   margin-bottom: 10px;
   font-size: 22px;
-  color: #ff5e57;
+  color: white;
 }
 
 .modal input,

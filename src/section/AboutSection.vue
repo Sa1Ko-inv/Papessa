@@ -5,6 +5,8 @@
       ref="aboutSection"
       :style="{ paddingTop: sectionPadding, paddingBottom: sectionPadding }"
   >
+    <div class="vignette vignette-left"><img src="./../assets/V1L.png" alt=""></div>
+    <div class="vignette vignette-right"><img src="./../assets/V1L.png" alt=""></div>
     <div class="container">
       <div class="about-content">
         <h2 class="about-title">О нас</h2>
@@ -74,8 +76,98 @@ onMounted(() => {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #ff5e57, transparent);
+  background: linear-gradient(90deg, transparent, #adacac, transparent);
 }
+
+.vignette {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 500px; /* регулируй по желанию */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 1; /* под контентом, но выше фона */
+  opacity: 0.6; /* серебристый эффект */
+  pointer-events: none;
+
+
+  img {
+    position: relative;
+    width: 280px;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6; /* серебристый эффект */
+  }
+}
+
+.vignette-left {
+  left: -23vh;
+  filter: drop-shadow(0 0 5px silver);
+  transform: scaleX(-1);
+}
+
+.vignette-right {
+  right: -23vh;
+  filter: drop-shadow(0 0 5px silver);
+
+}
+
+@media (max-width: 1245px) {
+  .vignette {
+    width: 46vh;
+    img {
+      position: relative;
+      width: 225px;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: -29vh;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: -29vh;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+@media (max-width: 1110px) {
+  .vignette {
+    width: 10vh;
+    img {
+      position: relative;
+      width: 225px;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: 0;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: 0;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 1100px) {
+  .vignette {
+    display: none;
+  }
+}
+
 
 .about-content {
   max-width: 900px;
@@ -100,9 +192,9 @@ onMounted(() => {
 .about-title::after {
   content: '';
   display: block;
-  width: 80px;
+  width: 190px;
   height: 3px;
-  background: #ff5e57;
+  background: linear-gradient(90deg, transparent, #adacac, transparent);
   margin: 15px auto 0;
 }
 

@@ -171,7 +171,8 @@ onUnmounted(() => {
   cursor: pointer;
 }
 .navbar-menu a:hover {
-  color: #ff5e57;
+  border-color: #adacac;
+  color: #adacac;
 }
 
 /* Бургер */
@@ -206,7 +207,7 @@ onUnmounted(() => {
 }
 
 /* Mobile */
-@media (max-width: 815px) {
+@media (max-width: 883px) {
   .burger {
     display: flex;
     position: relative;
@@ -284,28 +285,12 @@ onUnmounted(() => {
   font-size: 26px;
   margin: 35px 0 35px 0;
   font-weight: 600;
-  color: #ff5e57;
+  color: #ffffff;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.hero__button {
-  padding: 15px 40px;
 
-  border: 3px solid #8a3735;
-  font-size: 18px;
-  border-radius: 12px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  box-shadow: 0 5px 15px rgba(255, 94, 87, 0.4);
-}
-
-.hero__button:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #e04e47, #9f4541);
-  box-shadow: 0 10px 20px rgba(255, 94, 87, 0.6);
-}
 
 /* Анимация появления */
 @keyframes fadeInUp {

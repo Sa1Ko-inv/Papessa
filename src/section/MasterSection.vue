@@ -101,7 +101,7 @@ onMounted(() => {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   background: rgba(20, 20, 20, 0.85);
   padding: 40px;
@@ -113,7 +113,7 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1000px;
   gap: 60px;
   padding: 30px 60px;
 }

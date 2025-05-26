@@ -23,11 +23,11 @@
         <div class="about-photo">
           <h2 class="studio-title">Студия, в которой мы вас ждём</h2>
           <div class="studio-gallery">
-            <img src="./../assets/hach1.jpg" alt="hachiko">
+            <img src="./../assets/dver.jpg" alt="dver">
             <img src="./../assets/kalmar.jpg" alt="kalmar">
-            <img src="./../assets/nout.jpg" alt="nout">
             <img src="./../assets/nadpis.jpg" alt="nadpis">
-            <img src="./../assets/nadpis.jpg" alt="nadpis">
+            <img src="./../assets/okno1.jpg" alt="okno">
+            <img src="./../assets/hach1.jpg" alt="hachiko">
           </div>
         </div>
 
@@ -95,7 +95,6 @@ onMounted(() => {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 500px; /* регулируй по желанию */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -106,7 +105,7 @@ onMounted(() => {
 
   img {
     position: relative;
-    width: 24vw;
+    width: 35vw;
     height: 100%;
     object-fit: cover;
     opacity: 0.6; /* серебристый эффект */
@@ -114,35 +113,33 @@ onMounted(() => {
 }
 
 .vignette-left {
-  left: -3vh;
+  left: -5vw;
   filter: drop-shadow(0 0 5px silver);
   transform: scaleX(-1);
 }
 
 .vignette-right {
-  right: -3vh;
+  right: -5vw;
   filter: drop-shadow(0 0 5px silver);
 
 }
 @media (max-width: 1670px) {
   .vignette {
-    width: 46vh;
     img {
       position: relative;
-      width: 400px;
       height: 100%;
       object-fit: cover;
       opacity: 0.6; /* серебристый эффект */
     }
   }
   .vignette-left {
-    left: -7vh;
+    left: -5vw;
     filter: drop-shadow(0 0 5px silver);
     transform: scaleX(-1);
   }
 
   .vignette-right {
-    right: -7vh;
+    right: -5vw;
     filter: drop-shadow(0 0 5px silver);
 
   }
@@ -150,23 +147,21 @@ onMounted(() => {
 
 @media (max-width: 1535px) {
   .vignette {
-    width: 46vh;
     img {
       position: relative;
-      width: 400px;
       height: 100%;
       object-fit: cover;
       opacity: 0.6; /* серебристый эффект */
     }
   }
   .vignette-left {
-    left: -14vh;
+    left: -5vw;
     filter: drop-shadow(0 0 5px silver);
     transform: scaleX(-1);
   }
 
   .vignette-right {
-    right: -14vh;
+    right: -5vw;
     filter: drop-shadow(0 0 5px silver);
 
   }
@@ -174,23 +169,21 @@ onMounted(() => {
 
 @media (max-width: 1400px) {
   .vignette {
-    width: 46vh;
     img {
       position: relative;
-      width: 240px;
       height: 100%;
       object-fit: cover;
       opacity: 0.6; /* серебристый эффект */
     }
   }
   .vignette-left {
-    left: -21vh;
+    left: -5vw;
     filter: drop-shadow(0 0 5px silver);
     transform: scaleX(-1);
   }
 
   .vignette-right {
-    right: -21vh;
+    right: -5vw;
     filter: drop-shadow(0 0 5px silver);
 
   }
@@ -207,13 +200,13 @@ onMounted(() => {
     }
   }
   .vignette-left {
-    left: -29vh;
+    left: -5vw;
     filter: drop-shadow(0 0 5px silver);
     transform: scaleX(-1);
   }
 
   .vignette-right {
-    right: -29vh;
+    right: -5vw;
     filter: drop-shadow(0 0 5px silver);
 
   }
@@ -252,7 +245,7 @@ onMounted(() => {
 
 
 .about-content {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 40px 60px;
   background-color: rgba(20, 20, 20, 0.8);
@@ -260,6 +253,8 @@ onMounted(() => {
   backdrop-filter: blur(4px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   animation: fadeInUp 1s ease forwards;
+  position: relative;
+  z-index: 2;
 }
 
 .about-title {
@@ -364,7 +359,7 @@ onMounted(() => {
 }
 
 .studio-gallery img {
-  width: 200px;
+  width: 246px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;

@@ -18,7 +18,7 @@
             <a href="#price">Цены</a>
             <a href="#master">Мастера</a>
             <a href="#work">Наши работы</a>
-            <a href="#contacts">Эскизы</a>
+            <a href="#sketch">Эскизы</a>
             <a href="#contacts">Мерч</a>
             <a href="#contacts">Контакты</a>
           </div>

@@ -1,16 +1,16 @@
 <template>
   <section
-      id="work"
-      class="work"
+      id="sketch"
+      class="sketch"
       ref="aboutSection"
       :style="{ paddingTop: sectionPadding, paddingBottom: sectionPadding }"
   >
     <div class="vignette vignette-left"><img src="./../assets/V1L.png" alt=""></div>
     <div class="vignette vignette-right"><img src="./../assets/V1L.png" alt=""></div>
     <div class="container">
-      <h2 class="work-title">Работы наших мастеров</h2>
-      <div class="work-dariya">
-          <h2>Работы Дарьи</h2>
+      <h2 class="sketch-title">Эскизы наших мастеров</h2>
+      <div class="sketch-dariya">
+        <h2>Эскизы Дарьи</h2>
         <swiper
             :slidesPerView="3"
             :spaceBetween="30"
@@ -19,18 +19,19 @@
             class="mySwiper"
             style="--swiper-pagination-color: white; --swiper-pagination-bullet-inactive-color: rgba(255,255,255,0.9);"
         >
-          <swiper-slide><img src="./../assets/D-Rab-1.jpg" alt="D-Rab-1"></swiper-slide>
-          <swiper-slide><img src="./../assets/D-Rab-2.jpg" alt="D-Rab-2"></swiper-slide>
-          <swiper-slide><img src="./../assets/D-Rab-3.jpg" alt="D-Rab-3"></swiper-slide>
-          <swiper-slide><img src="./../assets/D-Rab-4.jpg" alt="D-Rab-4"></swiper-slide>
-          <swiper-slide><img src="./../assets/D-Rab-5.jpg" alt="D-Rab-5"></swiper-slide>
-          <swiper-slide><img src="./../assets/D-Rab-6.jpg" alt="D-Rab-6"></swiper-slide>
-          <swiper-slide><img src="./../assets/D-Rab-7.jpg" alt="D-Rab-7"></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-D-1.jpg" alt="Sketch-D-1" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-D-2.jpg" alt="Sketch-D-2" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-D-3.jpg" alt="Sketch-D-3" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-D-4.jpg" alt="Sketch-D-4" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-D-5.jpg" alt="Sketch-D-5" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-D-6.jpg" alt="Sketch-D-6" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-D-7.jpg" alt="Sketch-D-7" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-D-8.jpg" alt="Sketch-D-7" @contextmenu.prevent></swiper-slide>
         </swiper>
       </div>
 
-      <div class="work-sonya">
-        <h2>Работы Софьи</h2>
+      <div class="sketch-sonya">
+        <h2>Эскизы Софьи</h2>
         <swiper
             :slidesPerView="3"
             :spaceBetween="30"
@@ -39,12 +40,14 @@
             class="mySwiper"
             style="--swiper-pagination-color: white; --swiper-pagination-bullet-inactive-color: rgba(255,255,255,0.9);"
         >
-          <swiper-slide><img src="./../assets/S-Rab-1.jpg" alt="S-Rab-1"></swiper-slide>
-          <swiper-slide><img src="./../assets/S-Rab-2.jpg" alt="S-Rab-2"></swiper-slide>
-          <swiper-slide><img src="./../assets/S-Rab-3.jpg" alt="S-Rab-3"></swiper-slide>
-          <swiper-slide><img src="./../assets/S-Rab-4.jpg" alt="S-Rab-4"></swiper-slide>
-          <swiper-slide><img src="./../assets/S-Rab-5.jpg" alt="S-Rab-5"></swiper-slide>
-          <swiper-slide><img src="./../assets/S-Rab-6.jpg" alt="S-Rab-6"></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-S-1.jpg" alt="Sketch-S-1" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-S-2.jpg" alt="Sketch-S-2" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-S-3.jpg" alt="Sketch-S-3" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-S-4.jpg" alt="Sketch-S-4" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-S-5.jpg" alt="Sketch-S-5" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-S-6.jpg" alt="Sketch-S-6" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-S-7.jpg" alt="Sketch-S-7" @contextmenu.prevent></swiper-slide>
+          <swiper-slide><img src="./../assets/Sketch-S-8.jpg" alt="Sketch-S-8" @contextmenu.prevent></swiper-slide>
         </swiper>
       </div>
     </div>
@@ -87,7 +90,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.work {
+.sketch {
   position: relative;
   padding: 80px 0;
   background-color: #121212;
@@ -97,12 +100,12 @@ onMounted(() => {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.work.visible {
+.sketch.visible {
   opacity: 1;
   transform: scale(1);
 }
 
-.work::before {
+.sketch::before {
   content: '';
   position: absolute;
   top: 0;
@@ -129,7 +132,6 @@ onMounted(() => {
     height: 100%;
     object-fit: cover;
     opacity: 0.6; /* серебристый эффект */
-    transform: scaleY(-1);
   }
 }
 
@@ -267,7 +269,7 @@ onMounted(() => {
   }
 }
 
-.work-title {
+.sketch-title {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 40px;
@@ -276,7 +278,7 @@ onMounted(() => {
   position: relative;
 }
 
-.work-title::after {
+.sketch-title::after {
   content: '';
   display: block;
   width: 700px;
@@ -296,13 +298,13 @@ onMounted(() => {
   z-index: 2;
 }
 
-.work-dariya,
-.work-sonya {
+.sketch-dariya,
+.sketch-sonya {
   margin-top: 60px;
 }
 
-.work-dariya h2,
-.work-sonya h2 {
+.sketch-dariya h2,
+.sketch-sonya h2 {
   font-size: 28px;
   color: #f5f5f5;
   margin-bottom: 20px;
@@ -310,8 +312,8 @@ onMounted(() => {
   text-align: left;
 }
 
-.work-dariya h2::before,
-.work-sonya h2::before {
+.sketch-dariya h2::before,
+.sketch-sonya h2::before {
   content: '';
   position: absolute;
   left: 0;
@@ -323,11 +325,11 @@ onMounted(() => {
 }
 
 /* Можно добавить небольшие различия между Дарьей и Софьей (по желанию) */
-.work-dariya h2::before {
+.sketch-dariya h2::before {
   background: linear-gradient(90deg, #60a5fa, transparent);; /* светло-фиолетовая */
 }
 
-.work-sonya h2::before {
+.sketch-sonya h2::before {
   background: linear-gradient(90deg, #c084fc, transparent);; /* светло-синяя */
 }
 
@@ -373,7 +375,7 @@ onMounted(() => {
 }
 
 @media (max-width: 768px) {
-  .work-title {
+  .sketch-title {
     font-size: 28px;
   }
 

@@ -5,6 +5,7 @@ import Header from "./section/Header.vue";
 import PriceSection from "./section/PriceSection.vue";
 import MasterSection from "./section/MasterSection.vue";
 import WorkSection from "./section/WorkSection.vue";
+import SketchSection from "./section/SketchSection.vue";
 </script>
 
 <template>
@@ -23,6 +24,9 @@ import WorkSection from "./section/WorkSection.vue";
     </section>
     <section id="work">
       <WorkSection />
+    </section>
+    <section id="sketch">
+      <SketchSection />
     </section>
     <section id="contacts">
       <ContactsSection />

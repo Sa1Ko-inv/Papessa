@@ -105,7 +105,7 @@ onMounted(() => {
 
   img {
     position: relative;
-    width: 35vw;
+    width: 30vw;
     height: 100%;
     object-fit: cover;
     opacity: 0.6; /* серебристый эффект */

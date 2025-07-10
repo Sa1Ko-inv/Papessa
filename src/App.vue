@@ -39,4 +39,7 @@ import MerchSection from "./section/MerchSection.vue";
 </template>
 
 <style scoped>
+.app {
+  overflow-x: hidden;
+}
 </style>

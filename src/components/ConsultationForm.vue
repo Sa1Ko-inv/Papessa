@@ -90,9 +90,11 @@ const submit = async () => {
 </script>
 
 <style scoped>
+/* === КНОПКА "Получить консультацию" — АДАПТИВНЫЕ СТИЛИ === */
+
 .open-button {
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: 14px 28px;
+  font-size: clamp(15px, 1.2vw, 18px);
   background-color: #d7d7d7;
   color: black;
   filter: drop-shadow(0 0 5px silver);
@@ -103,6 +105,50 @@ const submit = async () => {
 }
 .open-button:hover {
   background-color: #c2c2c2;
+}
+
+/* Большие экраны (≥1920px) */
+@media (min-width: 1920px) {
+  .open-button {
+    padding: 18px 36px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+}
+
+/* Ноутбуки (1024px–1919px) */
+@media (min-width: 1024px) and (max-width: 1919px) {
+  .open-button {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+}
+
+/* Планшеты (768px–1023px) */
+@media (max-width: 1023px) {
+  .open-button {
+    padding: 12px 24px;
+    font-size: 17px;
+  }
+}
+
+/* Мобильные (481px–767px) */
+@media (max-width: 767px) {
+  .open-button {
+    padding: 10px 22px;
+    font-size: 16px;
+  }
+}
+
+/* Маленькие мобильные (до 480px) */
+@media (max-width: 480px) {
+  .open-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-top: 15px;
+  }
 }
 
 .modal-overlay {

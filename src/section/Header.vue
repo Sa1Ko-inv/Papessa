@@ -15,12 +15,12 @@
           </button>
           <div :class="['navbar-menu', { open: isOpen }]">
             <a @click.prevent="scrollToSection('about')">О нас</a>
-            <a href="#price">Цены</a>
-            <a href="#master">Мастера</a>
-            <a href="#work">Наши работы</a>
-            <a href="#sketch">Эскизы</a>
-            <a href="#merch">Мерч</a>
-            <a href="#contacts">Контакты</a>
+            <a @click.prevent="scrollToSection('price')">Цены</a>
+            <a @click.prevent="scrollToSection('master')">Мастера</a>
+            <a @click.prevent="scrollToSection('work')">Наши работы</a>
+            <a @click.prevent="scrollToSection('sketch')">Эскизы</a>
+            <a @click.prevent="scrollToSection('merch')">Мерч</a>
+            <a @click.prevent="scrollToSection('contacts')">Контакты</a>
           </div>
         </nav>
       </div>
@@ -93,6 +93,11 @@ onUnmounted(() => {
 
 
 <style>
+:root {
+  --max-container: 1400px;
+}
+
+/* Базовая стилизация */
 .header {
   position: relative;
   background-image: url('../assets/background.png');
@@ -119,12 +124,17 @@ onUnmounted(() => {
   z-index: 2;
 }
 
-/* navbar обёртка */
+.container {
+  max-width: var(--max-container);
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
 .navbar-wrapper {
   position: relative;
   transition: all 0.3s ease;
   background-color: transparent;
-  z-index: 1000; /* Базовый z-index для навбара */
+  z-index: 1000;
 }
 
 .navbar-wrapper.sticky {
@@ -134,26 +144,24 @@ onUnmounted(() => {
   right: 0;
   background-color: rgba(20, 20, 20, 0.98);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-  z-index: 1001; /* Выше базового z-index и фона */
-}
-
-.container {
-  max-width: 1400px;
-  padding: 0 40px;
-  margin: 0 auto;
+  z-index: 1001;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .navbar-link img.navbar-logo {
   width: 160px;
-  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-link img.navbar-logo:hover {
+  transform: scale(1.05);
 }
 
 .navbar-menu {
@@ -163,29 +171,32 @@ onUnmounted(() => {
 }
 
 .navbar-menu a {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 500;
   color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
   cursor: pointer;
 }
+
 .navbar-menu a:hover {
   border-color: #adacac;
   color: #adacac;
 }
 
-/* Бургер */
 .burger {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 25px;
-  height: 20px;
+  width: 30px;
+  height: 22px;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1002;
+  padding: 0;
 }
 
 .burger span {
@@ -194,60 +205,19 @@ onUnmounted(() => {
   width: 100%;
   background: white;
   border-radius: 2px;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
+
 .burger span.open:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
+
 .burger span.open:nth-child(2) {
   opacity: 0;
 }
+
 .burger span.open:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Mobile */
-@media (max-width: 883px) {
-  .burger {
-    display: flex;
-    position: relative;
-    z-index: 1002; /* Важно: выше чем у меню */
-  }
-
-  .navbar-menu {
-    position: fixed; /* Изменено с absolute на fixed */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(28, 28, 28, 0.98);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-height: 100vh;
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 1001; /* Выше основного контента */
-    transition: all 0.4s ease;
-    padding: 0;
-    margin-top: 0;
-  }
-
-  .navbar-menu.open {
-    height: 100vh;
-    opacity: 1;
-    pointer-events: auto;
-    padding: 20px 0;
-  }
-
-  .navbar-menu a {
-    padding: 15px 0;
-    font-size: 22px;
-    width: 100%;
-    text-align: center;
-  }
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .header-content {
@@ -263,14 +233,14 @@ onUnmounted(() => {
 }
 
 .header-content h1 {
-  font-size: 45px;
+  font-size: clamp(28px, 4vw, 55px);
   font-weight: 700;
   margin-bottom: 25px;
   line-height: 1.3;
 }
 
 .header-content p {
-  font-size: 20px;
+  font-size: clamp(15px, 2vw, 22px);
   line-height: 1.6;
   margin: 15px 0;
   color: #f0f0f0;
@@ -282,17 +252,14 @@ onUnmounted(() => {
 }
 
 .header-content h4 {
-  font-size: 26px;
-  margin: 35px 0 35px 0;
+  font-size: clamp(18px, 2.2vw, 30px);
+  margin: 35px 0;
   font-weight: 600;
   color: #ffffff;
   padding-bottom: 20px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.3);
 }
 
-
-
-/* Анимация появления */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -304,32 +271,199 @@ onUnmounted(() => {
   }
 }
 
-/* Адаптив */
-@media (max-width: 768px) {
+/* Большие экраны (≥1920px) */
+@media (min-width: 1920px) {
+  :root {
+    --max-container: 2500px;
+  }
+
+  .header {
+    background-size: 100% 150vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000; /* чёрный фон под картинкой, если не занимает весь экран */
+  }
+
+  .container {
+    padding: 0 80px;
+  }
+
+  .navbar-menu {
+    gap: 40px;
+  }
+
+  .navbar-link img.navbar-logo {
+    width: 180px;
+  }
+
   .header-content {
-    padding: 30px 20px;
-    margin-top: 60px;
+    max-width: 1670px;
+    padding: 60px 80px;
   }
 
   .header-content h1 {
-    font-size: 34px;
+    font-size: clamp(28px, 4vw, 55px);
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.3;
   }
 
   .header-content p {
-    font-size: 16px;
+    font-size: clamp(23px, 2vw, 28px);
+    line-height: 1.6;
+    margin: 15px 0;
+    color: #f0f0f0;
   }
 
   .header-content h4 {
-    font-size: 20px;
-  }
-
-  .hero__button {
-    width: 100%;
-    text-align: center;
+    font-size: clamp(18px, 2.2vw, 39px);
   }
 }
 
+/* Ноутбуки (1024px–1919px) */
+@media (min-width: 1024px) and (max-width: 1919px) {
+  .container {
+    padding: 0 60px;
+  }
+
+  .header {
+    background-position: center 30%;
+  }
+
+  .header-content {
+    max-width: 1670px;
+    padding: 60px 80px;
+  }
+
+}
+
+/* Планшеты (768px–1023px) */
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(28, 28, 28, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    z-index: 1000;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar-menu.open a {
+    font-size: 22px;
+    padding: 10px 0;
+  }
+
+  .header-content {
+    padding: 30px 25px;
+    margin-top: 60px;
+  }
+
+  .header {
+    background-position: center 25%;
+    min-height: 85vh;
+  }
+
+  .header-content {
+    padding: 35px 40px;
+  }
+}
+
+/* Мобильные (481px–767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    min-height: 70vh;
+    padding-top: 0;
+    padding-bottom: 60px;
+    background-position: center 20%;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(28, 28, 28, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    z-index: 1000;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar-menu.open a {
+    font-size: 22px;
+    padding: 10px 0;
+  }
+
+  .header-content {
+    padding: 30px 25px;
+    margin-top: 60px;
+  }
+}
+
+/* Маленькие мобильные (до 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .navbar-link img.navbar-logo {
+    width: 130px;
+    position: relative;
+    top: 5px;
+  }
+
+  .header {
+    padding-top: 15px;
+    padding-bottom: 40px;
+    background-position: center 15%;
+    min-height: 70vh;
+  }
+
+  .header-content {
+    padding: 25px 20px;
+    margin-top: 40px;
+  }
+
+  .burger {
+    width: 25px;
+    height: 20px;
+  }
+}
 </style>
-
-
-

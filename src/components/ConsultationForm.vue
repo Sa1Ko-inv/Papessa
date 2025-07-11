@@ -59,7 +59,7 @@ const openAndScroll = () => {
 
   // Ждём пока DOM обновится
   setTimeout(() => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1920) {
       const modal = document.querySelector('.modal')
       if (modal) {
         modal.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -238,10 +238,10 @@ const submit = async () => {
   }
 
   .modal-overlay {
-    top: -18vh;
-    left: -25vw;
+    top: -33vh;
+    left: -15vw;
     width: 120vw;
-    height: 110vh;
+    height: 120vh;
   }
 
   .modal {
@@ -300,10 +300,10 @@ const submit = async () => {
   }
 
   .modal-overlay {
-    top: -15vh;
+    top: -30vh;
     left: -20vw;
     width: 120vw;
-    height: 110vh;
+    height: 120vh;
   }
   .modal {
     background: #1e1e1e;

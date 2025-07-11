@@ -300,8 +300,8 @@ const submit = async () => {
   }
 
   .modal-overlay {
-    top: -30vh;
-    left: -20vw;
+    top: -25vh;
+    left: -30vw;
     width: 120vw;
     height: 120vh;
   }

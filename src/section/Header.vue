@@ -321,7 +321,7 @@ onUnmounted(() => {
   }
 }
 
-/* Ноутбуки (1024px–1919px) */
+/* Ноутбуки (1024px–1920px) */
 @media (min-width: 1025px) and (max-width: 1920px) {
   .container {
     padding: 0 60px;
@@ -334,7 +334,7 @@ onUnmounted(() => {
   .header-content {
     max-width: 1670px;
     padding: 60px 80px;
-    margin-top: 100px;
+    margin-top: 40px;
   }
 
 }

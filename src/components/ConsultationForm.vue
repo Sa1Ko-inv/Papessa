@@ -143,27 +143,31 @@ const submit = async () => {
 
 .modal-overlay {
   position: fixed;
-  top: -18vh;
-  left: -40vw;
-  width: 150vw;
-  height: 110vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10000;
+  padding: 20px;
 }
 
 .modal {
   background: #1e1e1e;
-  padding: 30px;
-  border-radius: 16px;
-  width: 440px;
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 14px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+
+  width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 12px;
+  gap: 12px;
 }
 
 .modal h2 {
@@ -358,7 +362,7 @@ const submit = async () => {
 
   .modal-overlay {
     top: -27vh;
-    left: -17vw;
+    left: -13vw;
     width: 120vw;
     height: 110vh;
   }
@@ -408,10 +412,8 @@ const submit = async () => {
   }
 
   .modal-overlay {
-    top: -32vh;
-    left: -15vw;
-    width: 120vw;
-    height: 110vh;
+    top: -34vh;
+    left: -13vw;
   }
 
   .modal h2 {
@@ -462,10 +464,8 @@ const submit = async () => {
   }
 
   .modal-overlay {
-    top: -78vh;
+    top: -22vh;
     left: -13.5vw;
-    width: 120vw;
-    height: 200vh;
   }
 
   .modal {

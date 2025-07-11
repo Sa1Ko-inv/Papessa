@@ -307,29 +307,6 @@ onMounted(() => {
   }
 }
 
-/* Адаптив */
-@media (max-width: 768px) {
-  .about {
-    padding: 60px 0;
-  }
-
-  .about-content {
-    padding: 30px 20px;
-  }
-
-  .about-title {
-    font-size: 28px;
-  }
-
-  .about-text p {
-    font-size: 16px;
-  }
-
-  .highlight {
-    font-size: 18px;
-  }
-}
-
 .about-photo {
   margin-top: 60px;
   text-align: center;
@@ -371,15 +348,154 @@ onMounted(() => {
   transform: scale(1.05);
 }
 
-/* Адаптив */
-@media (max-width: 768px) {
+/* Большие экраны (≥1921px) */
+@media (min-width: 1921px) {
   .studio-gallery {
-    gap: 12px;
+    gap: 30px;
+    justify-content: center;
   }
 
   .studio-gallery img {
-    width: 100%;
-    max-width: 320px;
+    width: 390px;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .about-content {
+    max-width: 1350px;
+  }
+
+  .about-title {
+    font-size: 45px;
+  }
+
+  .studio-title {
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .about-text p {
+    font-size: 25px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+  }
+
+  .vignette {
+    img {
+      position: relative;
+      width: 800px;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: 0;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: 0;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+/* Ноутбуки (1024px–1920px) */
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .studio-gallery {
+    gap: 20px;
+  }
+
+  .studio-gallery img {
+    width: calc(33.333% - 13.33px);
+    max-width: 100%;
+  }
+}
+
+/* Планшеты (768px–1024px) */
+@media (max-width: 1024px) {
+  .studio-title {
+    font-size: 24px;
+  }
+
+  .studio-title::after {
+    width: 260px;
+  }
+
+  .studio-gallery {
+    gap: 30px;
+  }
+
+  .studio-gallery img {
+    width: calc(50% - 164px);
+    max-width: 100%;
+  }
+}
+
+/* Мобильные (481px–768px) */
+@media (max-width: 768px) {
+  .studio-title {
+    font-size: 22px;
+  }
+
+  .studio-title::after {
+    width: 220px;
+  }
+
+  .studio-gallery {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .studio-gallery img {
+    width: 298px;
+    border-radius: 10px;
+  }
+}
+
+/* Очень маленькие экраны (до 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .about-content {
+    padding: 20px;
+  }
+
+  .about-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .about-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 17px;
+    color: #e0e0e0;
+  }
+
+  .studio-title {
+    font-size: 20px;
+  }
+
+  .studio-title::after {
+    width: 300px;
+  }
+
+  .studio-gallery {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .studio-gallery img {
+    width: clamp(145px, 40vw, 240px);
+    border-radius: 10px;
   }
 }
 

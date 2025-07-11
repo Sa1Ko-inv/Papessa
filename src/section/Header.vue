@@ -272,7 +272,7 @@ onUnmounted(() => {
 }
 
 /* Большие экраны (≥1920px) */
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
   :root {
     --max-container: 2500px;
   }
@@ -299,6 +299,7 @@ onUnmounted(() => {
   .header-content {
     max-width: 1670px;
     padding: 60px 80px;
+    margin-top: 100px;
   }
 
   .header-content h1 {
@@ -321,7 +322,7 @@ onUnmounted(() => {
 }
 
 /* Ноутбуки (1024px–1919px) */
-@media (min-width: 1024px) and (max-width: 1919px) {
+@media (min-width: 1025px) and (max-width: 1920px) {
   .container {
     padding: 0 60px;
   }
@@ -333,12 +334,13 @@ onUnmounted(() => {
   .header-content {
     max-width: 1670px;
     padding: 60px 80px;
+    margin-top: 100px;
   }
 
 }
 
 /* Планшеты (768px–1023px) */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .container {
     padding: 0 30px;
   }
@@ -389,7 +391,7 @@ onUnmounted(() => {
 }
 
 /* Мобильные (481px–767px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .container {
     padding: 0 20px;
   }
@@ -461,12 +463,19 @@ onUnmounted(() => {
 
   .header-content {
     padding: 25px 20px;
-    margin-top: 40px;
+    margin-top: 10px;
   }
 
   .burger {
     width: 25px;
     height: 20px;
+  }
+
+  .header-content h4 {
+    font-size: clamp(16px, 2vw, 24px);
+    margin: 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.3);
   }
 }
 </style>

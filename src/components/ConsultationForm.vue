@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Кнопка открытия -->
-    <button @click="isOpen = true" class="open-button">Получить консультацию</button>
+    <button @click="openAndScroll" class="open-button">Получить консультацию</button>
 
     <!-- Модальное окно -->
     <div v-if="isOpen" class="modal-overlay" @click="close">
@@ -53,6 +53,21 @@ const datePickerTranslations = {
   select: 'Выбрать',
   today: 'Сегодня',
 };
+
+const openAndScroll = () => {
+  isOpen.value = true
+
+  // Ждём пока DOM обновится
+  setTimeout(() => {
+    if (window.innerWidth <= 768) {
+      const modal = document.querySelector('.modal')
+      if (modal) {
+        modal.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+    }
+  }, 100) // небольшой таймер, чтобы modal успела отрендериться
+}
+
 
 const isOpen = ref(false)
 const name = ref('')
@@ -211,7 +226,7 @@ const submit = async () => {
 
 
 /* Большие экраны (≥1920px) */
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
   .open-button {
     padding: 18px 36px;
     font-size: 20px;
@@ -274,7 +289,7 @@ const submit = async () => {
 }
 
 /* Ноутбуки (1024px–1919px) */
-@media (min-width: 1024px) and (max-width: 1919px) {
+@media (min-width: 1025px) and (max-width: 1920px) {
   .open-button {
     padding: 14px 28px;
     font-size: 18px;
@@ -335,7 +350,7 @@ const submit = async () => {
 }
 
 /* Планшеты (768px–1023px) */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .open-button {
     padding: 12px 24px;
     font-size: 17px;
@@ -386,7 +401,7 @@ const submit = async () => {
 }
 
 /* Мобильные (481px–767px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .open-button {
     padding: 10px 22px;
     font-size: 16px;
@@ -436,8 +451,8 @@ const submit = async () => {
   }
 }
 
-/* Очень маленькие экраны (до 430px) */
-@media (max-width: 430px) {
+/* Очень маленькие экраны (до 480px) */
+@media (max-width: 480px) {
   .open-button {
     width: 100%;
     padding: 12px 0;
@@ -447,10 +462,10 @@ const submit = async () => {
   }
 
   .modal-overlay {
-    top: -35vh;
+    top: -78vh;
     left: -13.5vw;
     width: 120vw;
-    height: 115vh;
+    height: 200vh;
   }
 
   .modal {
@@ -542,7 +557,7 @@ const submit = async () => {
   margin-inline-start: 0;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .custom-datepicker {
     --dp-input-padding: 10px;
     --dp-border-radius: 8px;
@@ -560,7 +575,7 @@ const submit = async () => {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .custom-datepicker {
     --dp-input-padding: 10px;
     --dp-font-size: 17px;
@@ -621,7 +636,7 @@ const submit = async () => {
   font-size: 20px;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .custom-datepicker {
     --dp-input-padding: 10px;
     --dp-font-size: 15px;

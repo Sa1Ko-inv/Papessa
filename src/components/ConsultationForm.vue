@@ -436,23 +436,52 @@ const submit = async () => {
   }
 }
 
-/* Маленькие мобильные (до 480px) */
-@media (max-width: 480px) {
+/* Очень маленькие экраны (до 430px) */
+@media (max-width: 430px) {
   .open-button {
     width: 100%;
     padding: 12px 0;
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 6px;
     margin-top: 15px;
   }
 
   .modal-overlay {
-    top: -32vh;
-    left: -13vw;
+    top: -35vh;
+    left: -13.5vw;
     width: 120vw;
-    height: 110vh;
+    height: 115vh;
+  }
+
+  .modal {
+    width: 90vw;
+    padding: 20px;
+    border-radius: 12px;
+    gap: 12px;
+  }
+
+  .modal h2 {
+    font-size: 18px;
+  }
+
+  .modal input {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .modal select {
+    font-size: 15px;
+    padding: 12px 2.5rem 12px 12px;
+    background-size: 1em !important;
+    background-position: right 1rem center;
+  }
+
+  .modal-actions button {
+    font-size: 16px;
+    padding: 12px 20px;
   }
 }
+
 </style>
 
 <style>
@@ -591,4 +620,26 @@ const submit = async () => {
   justify-content: center;
   font-size: 20px;
 }
+
+@media (max-width: 430px) {
+  .custom-datepicker {
+    --dp-input-padding: 10px;
+    --dp-font-size: 15px;
+    --dp-preview-font-size: 12px;
+  }
+
+  .dp__action_button {
+    padding: 12px 50px;
+  }
+
+  .dp__action_select::after,
+  .dp__action_cancel::after {
+    font-size: 16px;
+  }
+
+  .dp__cell_inner {
+    font-size: 12px;
+  }
+}
+
 </style>

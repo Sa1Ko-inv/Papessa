@@ -233,7 +233,7 @@ onUnmounted(() => {
 }
 
 .header-content h1 {
-  font-size: clamp(28px, 4vw, 55px);
+  font-size: clamp(24px, 4vw, 55px);
   font-weight: 700;
   margin-bottom: 25px;
   line-height: 1.3;
@@ -452,7 +452,10 @@ onUnmounted(() => {
   .header {
     padding-top: 15px;
     padding-bottom: 40px;
-    background-position: center 15%;
+    background-position: center 5%;
+    background-size: 600px 100%;
+    background-repeat: no-repeat;
+    background-color: #000; /* чёрный фон под картинкой, если не занимает весь экран */
     min-height: 70vh;
   }
 

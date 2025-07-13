@@ -144,17 +144,6 @@ onMounted(() => {
   }
 }
 
-/* Адаптив */
-@media (max-width: 768px) {
-  .merch-section {
-    padding: 60px 0;
-  }
-
-  .merch-title {
-    font-size: 28px;
-  }
-}
-
 .vignette {
   position: absolute;
   top: 0;
@@ -215,6 +204,113 @@ onMounted(() => {
 @media (max-width: 1150px) {
   .vignette {
     display: none;
+  }
+}
+
+/* ======= >1920px (Большие экраны) ======= */
+@media (min-width: 1921px) {
+  .container {
+    max-width: 1400px;
+    padding: 60px;
+  }
+
+  .merch-title {
+    font-size: 48px;
+  }
+
+  .merch-title::after {
+    width: 900px;
+  }
+
+  .merch-gallery img {
+    width: 400px;
+  }
+
+  .vignette {
+    img {
+      max-width: 590px;
+      position: relative;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: 0;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: 0;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+/* ======= max-width: 1024px (Планшеты) ======= */
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px;
+  }
+
+  .merch-title {
+    font-size: 32px;
+  }
+
+  .merch-title::after {
+    width: 500px;
+  }
+
+  .merch-gallery img {
+    width: 290px;
+  }
+}
+
+/* ======= max-width: 768px (Мобильные) ======= */
+@media (max-width: 768px) {
+  .merch-title {
+    font-size: 26px;
+  }
+
+  .merch-title::after {
+    width: 300px;
+  }
+
+  .merch-photo {
+    margin-top: 40px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .merch-gallery img {
+    width: 220px;
+  }
+}
+
+/* ======= max-width: 480px (Маленькие экраны) ======= */
+@media (max-width: 480px) {
+  .merch-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .merch-title::after {
+    width: 250px;
+  }
+
+  .merch-photo {
+    margin-top: 40px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .merch-gallery img {
+    width: 150px;
   }
 }
 
@@ -418,16 +514,6 @@ onMounted(() => {
 <!--  }-->
 <!--}-->
 
-<!--/* Адаптив */-->
-<!--@media (max-width: 768px) {-->
-<!--  .merch-section {-->
-<!--    padding: 60px 0;-->
-<!--  }-->
-
-<!--  .merch-title {-->
-<!--    font-size: 28px;-->
-<!--  }-->
-<!--}-->
 
 <!--.vignette {-->
 <!--  position: absolute;-->
@@ -465,6 +551,7 @@ onMounted(() => {
 <!--@media (max-width: 1400px) {-->
 <!--  .vignette {-->
 <!--    width: 420px;-->
+
 <!--    img {-->
 <!--      position: relative;-->
 <!--      height: 100%;-->
@@ -472,6 +559,7 @@ onMounted(() => {
 <!--      opacity: 0.6; /* серебристый эффект */-->
 <!--    }-->
 <!--  }-->
+
 <!--  .vignette-left {-->
 <!--    left: -9vh;-->
 <!--    filter: drop-shadow(0 0 5px silver);-->
@@ -492,4 +580,119 @@ onMounted(() => {
 <!--  }-->
 <!--}-->
 
+<!--/* ======= >1920px (Большие экраны) ======= */-->
+<!--@media (min-width: 1921px) {-->
+<!--  .container {-->
+<!--    max-width: 1400px;-->
+<!--    padding: 60px;-->
+<!--  }-->
+
+<!--  .merch-title {-->
+<!--    font-size: 48px;-->
+<!--  }-->
+
+<!--  .merch-title::after {-->
+<!--    width: 900px;-->
+<!--  }-->
+
+<!--  .merch-gallery img {-->
+<!--    width: 320px;-->
+<!--  }-->
+<!--.vignette {-->
+<!--img {-->
+<!--max-width: 590px;-->
+<!--position: relative;-->
+<!--height: 100%;-->
+<!--object-fit: cover;-->
+<!--opacity: 0.6; /* серебристый эффект */-->
+<!--}-->
+<!--}-->
+<!--.vignette-left {-->
+<!--left: 0;-->
+<!--filter: drop-shadow(0 0 5px silver);-->
+<!--transform: scaleX(-1);-->
+<!--}-->
+
+<!--.vignette-right {-->
+<!--right: 0;-->
+<!--filter: drop-shadow(0 0 5px silver);-->
+
+<!--}-->
+<!--}-->
+
+<!--/* ======= max-width: 1024px (Планшеты) ======= */-->
+<!--@media (max-width: 1024px) {-->
+<!--  .container {-->
+<!--    padding: 30px;-->
+<!--    margin-bottom: 30px;-->
+<!--  }-->
+
+<!--  .merch-title {-->
+<!--    font-size: 32px;-->
+<!--  }-->
+
+<!--  .merch-title::after {-->
+<!--    width: 500px;-->
+<!--  }-->
+
+<!--  .merch-category {-->
+<!--    margin-top: 40px;-->
+<!--  }-->
+
+<!--  .container {-->
+<!--    padding: 40px 20px;-->
+<!--  }-->
+
+<!--  .merch-gallery img {-->
+<!--    width: 200px;-->
+<!--  }-->
+<!--}-->
+
+<!--/* ======= max-width: 768px (Мобильные) ======= */-->
+<!--@media (max-width: 768px) {-->
+<!--  .merch-title {-->
+<!--    font-size: 26px;-->
+<!--    margin-bottom: 20px;-->
+<!--  }-->
+
+<!--  .merch-title::after {-->
+<!--    width: 300px;-->
+<!--  }-->
+
+<!--  .merch-category {-->
+<!--    margin-top: 40px;-->
+<!--  }-->
+
+<!--  .container {-->
+<!--    padding: 40px 20px;-->
+<!--  }-->
+
+<!--  .merch-gallery img {-->
+<!--    width: 170px;-->
+<!--  }-->
+<!--}-->
+
+<!--/* ======= max-width: 480px (Маленькие экраны) ======= */-->
+<!--@media (max-width: 480px) {-->
+<!--  .merch-title {-->
+<!--    font-size: 22px;-->
+<!--    margin-bottom: 20px;-->
+<!--  }-->
+
+<!--  .merch-title::after {-->
+<!--    width: 250px;-->
+<!--  }-->
+
+<!--  .container {-->
+<!--    padding: 30px 16px;-->
+<!--  }-->
+
+<!--  .merch-category {-->
+<!--    margin-top: 40px;-->
+<!--  }-->
+
+<!--  .merch-gallery img {-->
+<!--    width: 140px;-->
+<!--  }-->
+<!--}-->
 <!--</style>-->

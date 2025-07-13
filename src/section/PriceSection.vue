@@ -559,5 +559,113 @@ button:disabled {
   }
 }
 
+/* ======= >1920px (Большие экраны) ======= */
+@media (min-width: 1921px) {
+  .container {
+    max-width: 1400px;
+    padding: 60px;
+  }
+
+  .section-title {
+    font-size: 48px;
+  }
+
+  .section-title::after {
+    width: 900px;
+  }
+
+  .merch-gallery img {
+    width: 320px;
+  }
+}
+
+/* ======= max-width: 1024px (Планшеты) ======= */
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-title::after {
+    width: 500px;
+  }
+
+  .merch-gallery img {
+    width: 200px;
+  }
+
+  .form input,
+  .form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* ======= max-width: 768px (Мобильные) ======= */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 26px;
+  }
+
+  .section-title::after {
+    width: 300px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .merch-gallery img {
+    width: 170px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .form input,
+  .form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* ======= max-width: 480px (Маленькие экраны) ======= */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 22px;
+  }
+
+  .section-title::after {
+    width: 250px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .merch-gallery img {
+    width: 140px;
+  }
+
+  .file-label {
+    font-size: 11px;
+    padding: 10px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .form input,
+  .form button {
+    font-size: 13px;
+    padding: 7px;
+  }
+}
+
 </style>
 

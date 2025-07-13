@@ -242,9 +242,12 @@ const submit = async () => {
     left: -15vw;
     width: 120vw;
     height: 120vh;
+    overflow: visible;
   }
 
   .modal {
+    position: relative;
+    overflow: visible;
     background: #1e1e1e;
     padding: 30px;
     border-radius: 16px;
@@ -304,8 +307,11 @@ const submit = async () => {
     left: -30vw;
     width: 120vw;
     height: 120vh;
+    overflow: visible;
   }
   .modal {
+    overflow: visible;
+    position: relative;
     background: #1e1e1e;
     padding: 30px;
     border-radius: 16px;
@@ -518,8 +524,13 @@ const submit = async () => {
 }
 
 .dp__menu {
-  border: 1px solid var(--dp-border-color);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 10001; /* Выше чем модальное окно (10000) */
+  transform: scale(1.1);
+  transform-origin: top center;
+  margin-top: 10px;
+  border: 1px solid #444;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Стили для кнопок в Datepicker */

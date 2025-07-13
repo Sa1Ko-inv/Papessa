@@ -166,35 +166,6 @@ onMounted(() => {
   }
 }
 
-/* Адаптив */
-@media (max-width: 768px) {
-  .master-section {
-    padding: 60px 0;
-  }
-
-  .master-title {
-    font-size: 28px;
-  }
-
-  .master-content {
-    padding: 30px 20px;
-    gap: 20px;
-  }
-
-  .master-card {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .master-card h3 {
-    font-size: 18px;
-  }
-
-  .master-card p {
-    font-size: 15px;
-  }
-}
-
 .vignette {
   position: absolute;
   top: 0;
@@ -256,5 +227,146 @@ onMounted(() => {
     display: none;
   }
 }
+
+@media (min-width: 1921px) {
+  .container {
+    max-width: 1400px;
+    padding: 60px;
+  }
+
+  .master-title {
+    font-size: 45px;
+  }
+
+  .master-title::after {
+    width: 800px;
+  }
+
+  .master-content {
+    gap: 80px;
+    padding: 40px 80px;
+  }
+
+  .master-card {
+    width: 360px;
+    padding: 30px;
+  }
+
+  .master-card h3 {
+    font-size: 24px;
+  }
+
+  .master-card p {
+    font-size: 18px;
+  }
+
+  .vignette {
+    width: 700px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .master-section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 30px;
+  }
+
+  .master-title {
+    font-size: 30px;
+  }
+
+  .master-title::after {
+    width: 400px;
+  }
+
+  .master-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .master-card {
+    width: 90%;
+    max-width: 340px;
+  }
+
+  .master-card h3 {
+    font-size: 20px;
+  }
+
+  .master-card p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .master-title {
+    font-size: 26px;
+  }
+
+  .master-title::after {
+    width: 300px;
+  }
+
+  .master-content {
+    gap: 30px;
+    padding: 10px;
+    flex-direction: row;
+  }
+
+  .master-card {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .master-card h3 {
+    font-size: 18px;
+  }
+
+  .master-card p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container {
+    padding: 20px 0;
+  }
+
+  .master-content {
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .master-title {
+    font-size: 22px;
+  }
+
+  .master-title::after {
+    width: 250px;
+
+  }
+
+  .master-card {
+    padding: 15px;
+    width: 250px;
+    height: 350px;
+  }
+
+  .master-card h3 {
+    font-size: 17px;
+  }
+
+  .master-card p {
+    font-size: 14px;
+  }
+}
+
 
 </style>

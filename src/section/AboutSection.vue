@@ -362,7 +362,7 @@ onMounted(() => {
   }
 
   .about-content {
-    max-width: 1350px;
+    max-width: 1400px;
   }
 
   .about-title {
@@ -386,20 +386,20 @@ onMounted(() => {
   .vignette {
     img {
       position: relative;
-      width: 800px;
+      width: 700px;
       height: 100%;
       object-fit: cover;
       opacity: 0.6; /* серебристый эффект */
     }
   }
   .vignette-left {
-    left: 0;
+    left: -1vw;
     filter: drop-shadow(0 0 5px silver);
     transform: scaleX(-1);
   }
 
   .vignette-right {
-    right: 0;
+    right: -1vw;
     filter: drop-shadow(0 0 5px silver);
 
   }

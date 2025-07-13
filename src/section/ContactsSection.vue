@@ -12,7 +12,8 @@
       <h2 class="contact-title">Контактная информация</h2>
 
       <div class="contact-details">
-        <p class="contact-item">📍 Адрес: г. Ярославль, ул. Флотская, д. 13</p>
+        <p class="contact-item">📍 Адрес: г. Ярославль, ул. Проспект Ленина, д. 14</p>
+        <p class="contact-item">📍 Находимся позади дома</p>
         <p class="contact-item">📞 Телефон: +7 (999) 123-12-12</p>
         <p class="contact-item">
           📱 Telegram:
@@ -21,7 +22,7 @@
       </div>
 
       <div class="map-wrapper">
-        <iframe src="https://yandex.ru/map-widget/v1/?ll=39.883533%2C57.633582&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzkwMTM5NRJB0KDQvtGB0YHQuNGPLCDQr9GA0L7RgdC70LDQstC70YwsINCk0LvQvtGC0YHQutCw0Y8g0YPQu9C40YbQsCwgMTMiCg2ziB9CFdeIZkI%2C&z=17.72"
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=39.874234%2C57.639977&mode=routes&rtext=~57.640152%2C39.873860&rtt=auto&ruri=~&z=19.4"
                 width="100%"
                 height="500"
                 allowfullscreen
@@ -201,6 +202,40 @@ onMounted(() => {
 
   .container {
     padding: 25px;
+  }
+}
+
+@media (min-width: 1921px) {
+  .container {
+    max-width: 1400px;
+    padding: 60px;
+  }
+
+  .vignette {
+    img {
+      max-width: 590px;
+      position: relative;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: -3.5vw;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: -3.5vw;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
   }
 }
 </style>

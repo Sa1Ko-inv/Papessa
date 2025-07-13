@@ -532,5 +532,32 @@ button:disabled {
   color: #adacac;
 }
 
+@media (min-width: 1921px) {
+  .container {
+    max-width: 1400px;
+    padding: 60px;
+  }
+
+  .vignette {
+    img {
+      position: relative;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* серебристый эффект */
+    }
+  }
+  .vignette-left {
+    left: -1vw;
+    filter: drop-shadow(0 0 5px silver);
+    transform: scaleX(-1);
+  }
+
+  .vignette-right {
+    right: -1vw;
+    filter: drop-shadow(0 0 5px silver);
+
+  }
+}
+
 </style>
 

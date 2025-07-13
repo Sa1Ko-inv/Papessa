@@ -366,7 +366,13 @@ const submit = async () => {
     font-size: 17px;
   }
 
+  .modal {
+    overflow: visible;
+    position: relative;
+  }
+
   .modal-overlay {
+    overflow: visible;
     top: -27vh;
     left: -13vw;
     width: 120vw;

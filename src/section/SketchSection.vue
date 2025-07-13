@@ -368,35 +368,122 @@ onMounted(() => {
   }
 }
 
-@media (max-width: 1024px) {
-  .mySwiper {
-    --swiper-pagination-bottom: 8px;
+/* ======= >1920px (Большие экраны) ======= */
+@media (min-width: 1921px) {
+  .container {
+    max-width: 1400px;
+    padding: 60px;
+  }
+
+  .sketch-title {
+    font-size: 48px;
+  }
+
+  .sketch-title::after {
+    width: 900px;
+  }
+
+  .sketch-dariya h2,
+  .sketch-sonya h2 {
+    font-size: 32px;
+  }
+
+  .mySwiper .swiper-slide img {
+    height: 500px;
   }
 }
 
+/* ======= max-width: 1024px (Планшеты) ======= */
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px;
+  }
+
+  .sketch-title {
+    font-size: 32px;
+  }
+
+  .sketch-title::after {
+    width: 500px;
+  }
+
+  .sketch-dariya h2,
+  .sketch-sonya h2 {
+    font-size: 24px;
+  }
+
+  .mySwiper {
+    --swiper-pagination-bottom: 8px;
+  }
+
+  .mySwiper .swiper-slide img {
+    height: 400px;
+  }
+}
+
+/* ======= max-width: 768px (Мобильные) ======= */
 @media (max-width: 768px) {
   .sketch-title {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .sketch-title::after {
+    width: 300px;
   }
 
   .container {
     padding: 20px;
   }
 
-  .mySwiper {
-    .swiper-slide {
-      height: auto;
-    }
+  .sketch-dariya {
+    margin-top: 45px;
+  }
+
+  .sketch-dariya h2,
+  .sketch-sonya h2 {
+    font-size: 20px;
+  }
+
+  .mySwiper .swiper-slide img {
+    height: 300px;
   }
 }
 
-@media (max-width: 640px) {
-  .swiper {
-    --swiper-pagination-bottom: 5px;
+/* ======= max-width: 480px (Маленькие экраны) ======= */
+@media (max-width: 480px) {
+  .sketch-title {
+    font-size: 22px;
+    margin-bottom: 20px;
   }
 
-  .swiper-slide {
-    transform: none !important;
+  .sketch-title::after {
+    width: 250px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .sketch-dariya {
+    margin-top: 35px;
+  }
+
+  .sketch-sonya {
+    margin-top: 0;
+  }
+
+  .sketch-dariya h2,
+  .sketch-sonya h2 {
+    font-size: 18px;
+  }
+
+  .sketch-dariya h2::before,
+  .sketch-sonya h2::before {
+    width: 150px;
+  }
+
+  .mySwiper .swiper-slide img {
+    height: 220px;
   }
 }
 

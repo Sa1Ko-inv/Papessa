@@ -356,7 +356,7 @@ onMounted(() => {
   .master-card {
     padding: 15px;
     width: 250px;
-    height: 350px;
+    height: 380px;
   }
 
   .master-card h3 {

@@ -24,10 +24,10 @@
           <h2 class="studio-title">Студия, в которой мы вас ждём</h2>
           <div class="studio-gallery">
             <img src="./../assets/dver.jpg" alt="dver">
-            <img src="./../assets/kalmar.jpg" alt="kalmar">
-            <img src="./../assets/nadpis.jpg" alt="nadpis">
-            <img src="./../assets/okno1.jpg" alt="okno">
-            <img src="./../assets/hach1.jpg" alt="hachiko">
+            <img src="./../assets/osnovaya-stud.jpg" alt="osnovaya">
+            <img src="./../assets/osnovaya-stud-1.jpg" alt="osnovaya-1">
+            <img src="./../assets/dop-stud.jpg" alt="dop">
+            <img src="./../assets/dop-stud-1.jpg" alt="dop-1">
           </div>
         </div>
 
@@ -357,6 +357,7 @@ onMounted(() => {
 
   .studio-gallery img {
     width: 390px;
+    height: 520px;
     max-width: 100%;
     border-radius: 12px;
   }
@@ -414,6 +415,7 @@ onMounted(() => {
   .studio-gallery img {
     width: calc(33.333% - 13.33px);
     max-width: 100%;
+    height: 473px;
   }
 }
 
@@ -434,6 +436,7 @@ onMounted(() => {
   .studio-gallery img {
     width: calc(50% - 164px);
     max-width: 100%;
+    height: 344px;
   }
 }
 
@@ -454,6 +457,7 @@ onMounted(() => {
 
   .studio-gallery img {
     width: 298px;
+    height: 397.33px;
     border-radius: 10px;
   }
 }
@@ -495,6 +499,7 @@ onMounted(() => {
 
   .studio-gallery img {
     width: clamp(145px, 40vw, 240px);
+    height: 193.33px;
     border-radius: 10px;
   }
 }

@@ -26,6 +26,7 @@
           <swiper-slide><img src="./../assets/D-Rab-5.jpg" alt="D-Rab-5"></swiper-slide>
           <swiper-slide><img src="./../assets/D-Rab-6.jpg" alt="D-Rab-6"></swiper-slide>
           <swiper-slide><img src="./../assets/D-Rab-7.jpg" alt="D-Rab-7"></swiper-slide>
+          <swiper-slide><img src="./../assets/D-Rab-8.jpg" alt="D-Rab-8"></swiper-slide>
         </swiper>
       </div>
 

@@ -39,7 +39,11 @@ import MerchSection from "./section/MerchSection.vue";
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
 .app {
   overflow-x: hidden;
+  font-family: "Cormorant SC", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 </style>

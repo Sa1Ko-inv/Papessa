@@ -29,9 +29,9 @@ import MerchSection from "./section/MerchSection.vue";
     <section id="sketch">
       <SketchSection />
     </section>
-    <section id="merch">
-      <MerchSection />
-    </section>
+<!--    <section id="merch">-->
+<!--      <MerchSection />-->
+<!--    </section>-->
     <section id="contacts">
       <ContactsSection />
     </section>

@@ -19,7 +19,7 @@
             <a @click.prevent="scrollToSection('master')">Мастера</a>
             <a @click.prevent="scrollToSection('work')">Наши работы</a>
             <a @click.prevent="scrollToSection('sketch')">Эскизы</a>
-            <a @click.prevent="scrollToSection('merch')">Мерч</a>
+<!--            <a @click.prevent="scrollToSection('merch')">Мерч</a>-->
             <a @click.prevent="scrollToSection('contacts')">Контакты</a>
           </div>
         </nav>
